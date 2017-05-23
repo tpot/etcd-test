@@ -13,5 +13,14 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[etcd-test::default]
+      - recipe[etcd-test::add_sid_repo]
+      - recipe[etcd-test::add_local_repo]
+      - recipe[etcd-test::install_etcd_client]
+      - recipe[etcd-test::install_etcd_server]
+    attributes:
+  - name: default-transitional
+    run_list:
+      - recipe[etcd-test::add_sid_repo]
+      - recipe[etcd-test::add_local_repo]
+      - recipe[etcd-test::install_etcd]
     attributes:
