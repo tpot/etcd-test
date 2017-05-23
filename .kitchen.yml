@@ -1,6 +1,8 @@
 ---
 driver:
   name: vagrant
+  vagrantfiles:
+    - vagrantfile-block.rb
 
 provisioner:
   name: chef_solo
