@@ -18,5 +18,6 @@ bin/*
 
 .ruby-version
 .ruby-gemset
+.rvmrc
 .kitchen/
 .kitchen.local.yml
