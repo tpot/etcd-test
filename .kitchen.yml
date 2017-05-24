@@ -24,3 +24,8 @@ suites:
       - recipe[etcd-test::add_local_repo]
       - recipe[etcd-test::install_etcd]
     attributes:
+  - name: cluster
+    run_list:
+      - recipe[etcd-test::add_sid_repo]
+      - recipe[etcd-test::add_local_repo]
+      - recipe[etcd-test::install_docker]
